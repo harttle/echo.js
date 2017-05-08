@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var http = require('http');
+var process = require('process')
  
 var server = http.createServer(function (req, res) {
     var text = '';
@@ -17,4 +18,8 @@ var server = http.createServer(function (req, res) {
     });
 });
 
-server.listen(8061);
+var port = process.env.PORT || 8061;
+
+server.listen(port, function(){
+    console.log('echo.js listening to port', port)
+});
