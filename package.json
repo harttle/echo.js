@@ -1,0 +1,24 @@
+{
+  "name": "echo.js",
+  "version": "1.0.0",
+  "description": "echo raw request headers and body",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harttle/echo.js.git"
+  },
+  "keywords": [
+    "echo",
+    "http",
+    "server"
+  ],
+  "author": "harttle <yangjvn@126.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harttle/echo.js/issues"
+  },
+  "homepage": "https://github.com/harttle/echo.js#readme"
+}
