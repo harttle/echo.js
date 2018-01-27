@@ -4,6 +4,7 @@
   "description": "echo raw request headers and body",
   "main": "index.js",
   "scripts": {
+    "postversion": "npm publish && git push --follow-tags",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
