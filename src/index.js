@@ -10,6 +10,10 @@ function defaultHeaders(req) {
         .join('');
 }
 
+function defaultCloseCb() {
+    console.log('echo.js shutdown successful');
+}
+
 function createServer(opts) {
     opts = opts || {};
 
@@ -23,12 +27,18 @@ function createServer(opts) {
         req.addListener('end', function () {
             res.writeHead(200, {'Content-Type': 'text/plain'});
             res.end(text);
+            if (req.url === '/shutdown' && req.method === 'POST') {
+                server.close(opts.closeCb || defaultCloseCb);
+            }
         });
     });
 }
 
 module.exports = {
-    defaultStatusLine: defaultStatusLine,
-    defaultHeaders: defaultHeaders,
-    createServer: createServer,
+    defaults: {
+        defaultStatusLine,
+        defaultHeaders,
+        defaultCloseCb,
+    },
+    createServer,
 };
