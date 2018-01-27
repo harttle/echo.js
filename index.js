@@ -15,6 +15,11 @@ var server = http.createServer(function (req, res) {
     req.addListener('end', function () {
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.end(text);
+        if (req.url === '/shutdown' && req.method === 'POST') {
+            server.close(function () {
+                console.log('echo.js shutdown successful');
+            });
+        }
     });
 });
 
