@@ -1,28 +1,28 @@
 {
-  "name": "echo.js",
-  "version": "1.0.1",
-  "description": "echo raw request headers and body",
-  "main": "src/index.js",
-  "scripts": {
-    "postversion": "npm publish && git push --follow-tags",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "echo.js": "./index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/harttle/echo.js.git"
-  },
-  "keywords": [
-    "echo",
-    "http",
-    "server"
-  ],
-  "author": "harttle <yangjvn@126.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/harttle/echo.js/issues"
-  },
-  "homepage": "https://github.com/harttle/echo.js#readme"
+    "name": "echo.js",
+    "version": "1.0.1",
+    "description": "echo raw request headers and body",
+    "main": "src/index.js",
+    "scripts": {
+        "postversion": "npm publish && git push --follow-tags",
+        "test": "node test"
+    },
+    "bin": {
+        "echo.js": "./index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/harttle/echo.js.git"
+    },
+    "keywords": ["echo", "http", "server"],
+    "author": "harttle <yangjvn@126.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/harttle/echo.js/issues"
+    },
+    "homepage": "https://github.com/harttle/echo.js#readme",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "superagent": "^3.8.2"
+    }
 }
