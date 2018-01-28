@@ -5,8 +5,8 @@ function createServer({ statusLine, headers, closeCb } = {}) {
     const server = http.createServer(function(req, res) {
         var statusLine = statusLine || defaults.statusLine(req);
         var headers = headers || defaults.headers(req);
-        var text = statusLine + '\n' + headers;
-        text += '\n';
+        var text = statusLine + '\r\n' + headers;
+        text += '\r\n';
 
         req.addListener('data', chunk => (text += chunk));
         req.addListener('end', function() {
