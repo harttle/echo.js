@@ -3,7 +3,7 @@ function statusLine(req) {
 }
 
 function headers(req) {
-    return req.rawHeaders.map((val, i) => (i % 2 ? val + '\n' : val + ': ')).join('');
+    return req.rawHeaders.map((val, i) => (i % 2 ? val + '\r\n' : val + ': ')).join('');
 }
 
 module.exports = {
